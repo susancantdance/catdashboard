@@ -1,6 +1,6 @@
 // import { createContext } from "react";
 // import "./App.css";
-import { Login } from "./components/Login";
+import { Login } from "./components/login";
 import { Dashboard } from "./components/dashboard";
 import { Post } from "./components/post";
 import { AllPosts } from "./components/allposts";
