@@ -1,0 +1,101 @@
+.post {
+  border-style: solid;
+  border-width: 1px;
+  margin: 10px;
+}
+
+.postbody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: purple; */
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* border-style: solid; */
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+ul.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.comments-title {
+  text-decoration: bold;
+  color: blue;
+  cursor: pointer;
+  width: 300px;
+}
+
+.close {
+  text-decoration: bold;
+  color: red;
+  cursor: pointer;
+}
+
+.comments-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add {
+  cursor: pointer;
+  color: green;
+}
+
+.formfields {
+  /* background-color: lightblue; */
+  padding-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+textarea {
+  flex: auto;
+  min-width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+input {
+  min-width: 300px;
+}
+
+.comment-button {
+  width: 200px;
+}
+
+.dashboard {
+  width: 200px;
+  margin-top: -25px;
+  margin-bottom: 25px;
+}
+
+.publish-checkbox {
+  /* background-color: pink; */
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 100px;
+}
+
+input[type="checkbox"] {
+  margin-left: -100px;
+}
