@@ -23,10 +23,10 @@ function Post({ post, setDisplay, comments }) {
   }
 
   const [formData, setFormData] = useState({
-    id: post.id,
+    id: post.id || "",
     title: post.title,
     body: post.body,
-    ispublished: post.ispublished,
+    ispublished: post.ispublished || false,
     authorid: +localStorage.getItem("userid"),
   });
 
@@ -84,7 +84,7 @@ function Post({ post, setDisplay, comments }) {
       console.log("NO POST ID");
       try {
         const response = await fetch(
-          `http://localhost:3000/posts`,
+          // `http://localhost:3000/posts`,
           `${import.meta.env.VITE_DB_URL}/posts`,
           {
             method: "POST",
