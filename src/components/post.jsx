@@ -22,12 +22,25 @@ function Post({ post, setDisplay, comments }) {
     console.log(postComments);
   }
 
-  const [formData, setFormData] = useState({
-    title: post.title,
-    body: post.body,
-    authorid: +localStorage.getItem("userid"),
-    ispublished: post.ispublished,
-  });
+  const [formData, setFormData] = useState({});
+
+  if (post) {
+    let postData = {
+      id: post.id,
+      title: post.title,
+      body: post.body,
+      ispublished: post.ispublished,
+    };
+    setFormData(postData);
+  } else {
+    let newData = {
+      title: "",
+      body: "",
+      authorid: +localStorage.getItem("userid"),
+      ispublished: false,
+    };
+    setFormData(newData);
+  }
 
   const token = localStorage.getItem("jwtToken");
 
