@@ -24,7 +24,7 @@ function Post({ post, setDisplay, comments }) {
 
   const [formData, setFormData] = useState({});
 
-  if (post && formData == {}) {
+  if (post != undefined && formData == {}) {
     let postData = {
       id: post.id,
       title: post.title,
@@ -43,6 +43,8 @@ function Post({ post, setDisplay, comments }) {
   }
 
   const token = localStorage.getItem("jwtToken");
+  console.log("CURRENT FORMDATA");
+  console.log(formData);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
