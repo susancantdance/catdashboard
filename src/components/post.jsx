@@ -23,9 +23,9 @@ function Post({ post, setDisplay, comments }) {
   }
 
   const [formData, setFormData] = useState({
-    id: post.id || "",
-    title: post.title,
-    body: post.body,
+    postid: post.id || "",
+    title: post.title || "",
+    body: post.body || "",
     ispublished: post.ispublished || false,
     authorid: +localStorage.getItem("userid"),
   });
