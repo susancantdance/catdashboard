@@ -24,7 +24,7 @@ function Post({ post, setDisplay, comments }) {
 
   const [formData, setFormData] = useState({});
 
-  if (post) {
+  if (post && formData == {}) {
     let postData = {
       id: post.id,
       title: post.title,
@@ -32,7 +32,7 @@ function Post({ post, setDisplay, comments }) {
       ispublished: post.ispublished,
     };
     setFormData(postData);
-  } else {
+  } else if (formData == {}) {
     let newData = {
       title: "",
       body: "",
