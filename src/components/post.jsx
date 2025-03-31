@@ -22,25 +22,32 @@ function Post({ post, setDisplay, comments }) {
     console.log(postComments);
   }
 
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    id: post.id,
+    title: post.title,
+    body: post.body,
+    ispublished: post.ispublished,
+    authorid: +localStorage.getItem("userid"),
+  });
 
-  if (post != undefined && formData == {}) {
-    let postData = {
-      id: post.id,
-      title: post.title,
-      body: post.body,
-      ispublished: post.ispublished,
-    };
-    setFormData(postData);
-  } else if (formData == {}) {
-    let newData = {
-      title: "",
-      body: "",
-      authorid: +localStorage.getItem("userid"),
-      ispublished: false,
-    };
-    setFormData(newData);
-  }
+  // if (post != undefined && formData == {}) {
+  //   let postData = {
+  //     id: post.id,
+  //     title: post.title,
+  //     body: post.body,
+  //     ispublished: post.ispublished,
+  //     authorid: +localStorage.getItem("userid"),
+  //   };
+  //   setFormData(postData);
+  // } else if (formData == {}) {
+  //   let newData = {
+  //     title: "",
+  //     body: "",
+  //     authorid: +localStorage.getItem("userid"),
+  //     ispublished: false,
+  //   };
+  //   setFormData(newData);
+  // }
 
   const token = localStorage.getItem("jwtToken");
   console.log("CURRENT FORMDATA");
