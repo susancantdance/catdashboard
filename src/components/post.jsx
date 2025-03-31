@@ -36,6 +36,7 @@ function Post({ post, setDisplay, comments }) {
     console.log("HANDLE SUBMIT");
     console.log(formData);
     if (post.id != null) {
+      console.log("POST ID EXISTS");
       try {
         const response = await fetch(
           // `http://localhost:3000/posts/${post.id}`,
@@ -58,6 +59,7 @@ function Post({ post, setDisplay, comments }) {
         console.error(JSON.stringify(err));
       }
     } else {
+      console.log("NO POST ID");
       try {
         const response = await fetch(
           `http://localhost:3000/posts`,
