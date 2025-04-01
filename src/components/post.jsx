@@ -109,6 +109,7 @@ function Post({ post, setDisplay, comments }) {
   const handleChange = (e) => {
     if (e.target.id == "publish") {
       // setIsChecked(e.target.checked);
+      console.log(e.target.checked);
       setFormData({ ...formData, ispublished: e.target.checked });
     } else {
       setFormData({ ...formData, [e.target.name]: e.target.value });
